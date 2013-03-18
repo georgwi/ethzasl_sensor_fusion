@@ -73,9 +73,6 @@ void PoseSensorHandler::noiseConfig(ssf_core::SSF_CoreConfig& config, uint32_t l
 
 void PoseSensorHandler::measurementCallback(const geometry_msgs::TransformStampedConstPtr & msg)
 {
-  if (msg->header.seq%5!=0)
-    return;
-
   // init variables
   ssf_core::State state_old;
   ros::Time time_old = msg->header.stamp;
