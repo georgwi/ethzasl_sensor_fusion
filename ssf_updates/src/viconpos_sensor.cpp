@@ -76,7 +76,7 @@ void PositionSensorHandler::measurementCallback(const geometry_msgs::TransformSt
 	//	ROS_INFO_STREAM("measurement received \n"
 	//					<< "type is: " << typeid(msg).name());
 
-	if (msg->header.seq%5!=0)
+	if (msg->header.seq%10!=0)
 	  return;
 
 	// init variables
